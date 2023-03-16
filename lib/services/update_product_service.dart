@@ -18,7 +18,7 @@ class UpdateProduct{
     Map<String, dynamic> data = await Api().post(url: 'https://fakestoreapi.com/products', body: body, );
 
 
-    return ProductModel.fromJason(data);
+    return ProductModel.fromJson(data);
   }
 
 }

@@ -10,15 +10,17 @@ class AllProductService{
     List<ProductModel> productList = [];
     
     // get data using url
-    List<dynamic> data = await Api().get(url: 'https://fakestoreapi.com/products');
+    List<dynamic> data = await Api().get(url: 'https://fakestoreapi.com/products' );
 
     // append data to productList , to convert it from Json to model
+    print (data.length);
     for (int i = 0 ; i < data.length ; i ++ ){
       productList.add(
-        ProductModel.fromJason(data[i])
+        ProductModel.fromJson(data[i])
       );
     }
 
+    print ('length ${productList.length}');
     return productList ;
   }
 

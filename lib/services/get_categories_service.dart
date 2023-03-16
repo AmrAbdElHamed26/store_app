@@ -17,7 +17,7 @@ class CategoriesService {
 
     for (int i = 0 ; i < data.length ; i ++ ){
       productList.add(
-          ProductModel.fromJason(data[i])
+          ProductModel.fromJson(data[i])
       );
     }
 
