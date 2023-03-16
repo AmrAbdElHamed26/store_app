@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/update_product_page.dart';
 
 import 'home_page.dart';
 
@@ -13,10 +14,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
+      routes: {
+        HomePage.id : (context)=>HomePage(),
+        UpdateProductPage.id : (context)=>UpdateProductPage(),
+      },
+
       debugShowCheckedModeBanner: false ,
       color: Colors.white,
       title: 'Flutter Demo',
-      home:  HomePage(),
+      initialRoute : HomePage.id,
     );
   }
 }
